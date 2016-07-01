@@ -10,7 +10,12 @@ building a webserver and webapp. It seeks to establish a discipline about the
 management of system state through ideas derived from FRP and reactive
 programming.
 
-[![Build Status](https://secure.travis-ci.org/clint-tseng/janus.png)](http://travis-ci.org/clint-tseng/janus)
+Setup
+=====
+
+For first time setup, run `bin/setup.sh`.
+
+> NOTE: For Socrata purposes, the `with-extract` branch should be treated as the trunk.
 
 Overview
 ========
