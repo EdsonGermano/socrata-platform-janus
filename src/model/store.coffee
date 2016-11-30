@@ -61,7 +61,7 @@ class Request extends Varying
 
   # Returns a promise for the deserialized request result. If the request
   # fails, the promise is rejected with the request state.
-  asPromise: () ->
+  asPromise: ->
     new Promise((resolve, reject) =>
       this.reactNow((state) =>
         if (state instanceof Request.state.type.Complete)
