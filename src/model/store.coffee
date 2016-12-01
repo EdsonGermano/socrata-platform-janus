@@ -59,6 +59,19 @@ class Request extends Varying
       # TODO: This should generate an object too. How does that happen?
       response
 
+  # Returns a promise for the deserialized request result. If the request
+  # fails, the promise is rejected with the request state.
+  asPromise: ->
+    new Promise((resolve, reject) =>
+      this.reactNow((state) =>
+        if (state instanceof Request.state.type.Complete)
+          if (state instanceof Request.state.type.Success)
+            resolve(state.result)
+          else
+            reject(state)
+      )
+    )
+
   # the default parse implementation uses the entity type declared here to
   # read in its attributes and make parsing decisions.
   @modelClass: Model
