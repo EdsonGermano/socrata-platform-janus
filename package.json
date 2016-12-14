@@ -1,7 +1,7 @@
 {
   "name": "janus",
   "description": "the two-faced application library-framework",
-  "version": "0.2.1",
+  "version": "0.2.1-socrata",
   "repository": {
     "type": "git",
     "url": "git://github.com/socrata-platform/janus.git"
